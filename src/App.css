@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(255, 255, 255);
+  background: linear-gradient(to right, #39b2ce, #f776d0); /* Gradient màu xanh lá */
   font-family: 'Arial', sans-serif;
   display: flex;
   justify-content: center;
@@ -41,7 +41,7 @@ button {
   font-size: 1.5rem;
   border: none;
   border-radius: 10px;
-  background-color: #444;
+  background-color: #555; /* Màu nền đồng nhất cho tất cả các nút */
   color: #fff;
   cursor: pointer;
   transition: 0.2s ease;
@@ -49,7 +49,7 @@ button {
 }
 
 button:hover {
-  background-color: #555;
+  background-color: #666; /* Tăng độ sáng khi hover */
   transform: translateY(-2px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
@@ -66,61 +66,43 @@ button:disabled {
   background-color: #888;
   cursor: not-allowed;
 }
+button:nth-child(2) {
+  background-color: #f44336; /* Màu nền cho nút backspace */
+  color: white;
+}
+
+button:nth-child(2):hover {
+  background-color: #d32f2f; /* Màu khi hover */
+}
+
+button:nth-child(2):active {
+  background-color: #b71c1c; /* Màu khi click */
+}
+
+button:nth-child(1), /* Nút "C" */
+button:nth-child(17) { /* Nút "=" */
+  background-color: #00de2c; /* Màu nền riêng cho "C" và "=" */
+  color: #fff;
+   
+}
+
+button:nth-child(1):hover, button:nth-child(17):hover {
+  background-color: #00b73c; /* Màu khi hover cho "C" và "=" */
+}
+
+button:nth-child(1):active, button:nth-child(17):active {
+  background-color: #00a12e; /* Màu khi click cho "C" và "=" */
+}
 
 .span-2 {
   grid-column: span 2;
-  background-color: #00de2c;
-  color: #fff;
 }
 
-button:nth-child(1) {
-  background-color: #f44336;
-  color: white;
-}
-
-button:nth-child(2), button:nth-child(3), button:nth-child(4) {
-  background-color: #4caf50;
-}
-
-button:nth-child(5), button:nth-child(6), button:nth-child(7) {
-  background-color: #2196f3;
-}
-
-button:nth-child(8), button:nth-child(9), button:nth-child(10) {
-  background-color: #ff9800;
-}
-
-button:nth-child(11), button:nth-child(12) {
-  background-color: #9c27b0;
-}
-
-button:nth-child(13), button:nth-child(14) {
-  background-color: #673ab7;
-}
-
-button:nth-child(15), button:nth-child(16) {
-  background-color: #3f51b5;
-}
-
-button:nth-child(17) {
-  background-color: #00de2c;  /* Màu nền cho nút "=" */
-  color: #fff;
- 
-}
-
-/* Tạo hiệu ứng cho toàn bộ máy tính */
-.calculator {
-  transition: transform 0.3s ease;
-}
-.footer {
+footer {
   margin-top: 20px;
   padding: 10px;
   text-align: center;
-  background-color: #2f2f2f;
-  color: white;
+  color: rgb(254, 0, 0);
   font-size: 1rem;
   border-top: 1px solid #444;
 }
-
- 
-  

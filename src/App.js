@@ -13,6 +13,10 @@ function App() {
     setInput("");
   };
 
+  const handleBackspace = () => {
+    setInput((prev) => prev.slice(0, -1)); // Xóa ký tự cuối cùng
+  };
+
   const handleEquals = () => {
     try {
       setInput(eval(input).toString()); // eval giúp tính toán biểu thức
@@ -27,21 +31,21 @@ function App() {
         <div className="display">{input || "0"}</div>
         <div className="buttons">
           <button onClick={handleClear} className="span-2">C</button>
+          <button onClick={handleBackspace}>←</button> {/* Nút backspace */}
           <button onClick={() => handleClick("/")}>÷</button>
           <button onClick={() => handleClick("*")}>×</button>
-          {[7, 8, 9, "-", 4, 5, 6, "+", 1, 2, 3, 0, ".", "="].map((btn, i) => (
+          {[7, 8, 9, "-", 4, 5, 6, "+", 1, 2, 3, ".", "="].map((btn, i) => (
             btn === "="
               ? <button key={i} onClick={handleEquals}>=</button>
               : <button key={i} onClick={() => handleClick(btn.toString())}>{btn}</button>
           ))}
+          <button onClick={() => handleClick("0")}>0</button> {/* Đặt 0 ở cuối */}
         </div>
       </div>
 
       {/* Thêm thông tin tác giả vào cuối ứng dụng */}
       <footer className="footer">
-        <p>
-           
-          Developed by:HungDang48</p>
+        <p>Developed by: HungDang48</p>
         <p>© 2025, All Rights Reserved</p>
       </footer>
     </div>
