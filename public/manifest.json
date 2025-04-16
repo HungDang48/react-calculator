@@ -8,6 +8,12 @@
       "type": "image/x-icon"
     },
     {
+      "src": "logo calculator.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    
+    {
       "src": "logo192.png",
       "type": "image/png",
       "sizes": "192x192"
